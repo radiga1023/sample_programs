@@ -33,8 +33,8 @@ class DerivedClass : public BaseClass
 {
 private:
   unsigned int jam;
-  using BaseClass::getValue(); //Making setValue() and getValue() as private in the Derived Class
-  using BaseClass::setValue();
+  using BaseClass::getValue; //Making setValue() and getValue() as private in the Derived Class
+  using BaseClass::setValue;
 public:
   DerivedClass()
   {
@@ -60,5 +60,6 @@ int main()
 {
   DerivedClass D;
   D.setValueDerived(2);
-  
+  cout << D.getValueDerived()<< endl; 
+  //cout << D.getValue() << endl; This line will cause the compilation error as getValue() is private in the derived class
 }
