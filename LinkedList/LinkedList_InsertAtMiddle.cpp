@@ -35,8 +35,8 @@ void insertNodeAtMid(Node** head_ref, int x)
         ptr = *head_ref;
         while (count-- > 1)
             ptr = ptr->link;
-        temp->link = ptr->link;
-        ptr->link = temp;
+        temp->link = ptr->link;//Assign the ptr to the next node to the new node
+        ptr->link = temp;//Assign the prev node link to the new node
     }
 }
 void displayList(Node* head)
