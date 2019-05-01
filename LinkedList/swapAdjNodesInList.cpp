@@ -45,6 +45,7 @@ void swapAdjNodes(Node* head)
 */
 
 //Approach 2
+/*Pairwise swap adjacent nodes of a linked list by changing pointer*/
 Node* swapAdjNodes(Node* head)
 {
     if (head == NULL)
