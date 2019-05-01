@@ -23,7 +23,28 @@ void displayList(Node* head)
         head = head->link;
     }
 }
+//Approach 1- Easy
+/*
+void swap(int* a, int* b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
+void swapAdjNodes(Node* head)
+{
+    if (head == NULL) return;
+    Node* temp = head;
+    while ((temp != NULL) && (temp->link) != NULL)
+    {
+        swap(&temp->data, &temp->link->data);//Parse the current and next node data 
+        temp = temp->link->link;//Increment by 2 steps
+    }
+}
+*/
+
+//Approach 2
 Node* swapAdjNodes(Node* head)
 {
     if (head == NULL)
